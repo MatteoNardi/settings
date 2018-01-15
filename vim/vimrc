@@ -97,8 +97,8 @@ set backspace=2
 "===== Shortcuts =====
 let mapleader=","
 nnoremap <Leader>vr :so ~/.vimrc<CR>
-nnoremap <Leader>vj :sp ~/.vim/bundle/vim-babel/.vimrc<CR>
-nnoremap <Leader>vs :execute "sp ~/.vim/bundle/vim-babel/syntax/".&ft.".vim"<CR>
+nnoremap <Leader>vj :sp ~/.vimrc<CR>
+nnoremap <Leader>vs :execute "sp ~/.vim/bundle/my_settings/syntax/".&ft.".vim"<CR>
 
 nnoremap <Leader>/ /<C-R>"<cr>
 
