@@ -3,3 +3,5 @@ set expandtab
 set tabstop=2
 set smarttab
 set list
+
+let g:program=expand("./%")
