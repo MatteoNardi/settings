@@ -1,6 +1,5 @@
 
 iabbr shebang #!/usr/bin/env python3
-nnoremap <Leader>a :w<CR>:!python3 %<CR>
 
 set ts=4
 set autoindent
@@ -13,7 +12,6 @@ set colorcolumn=81
 set foldlevel=99
 
 
-let g:ycm_python_binary_path = 'python'
 autocmd User YcmQuickFixOpened cclose
 map <C-]> :YcmCompleter GoTo<CR>
 nnoremap <Leader>f :YcmCompleter FixIt<CR>

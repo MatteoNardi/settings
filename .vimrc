@@ -125,6 +125,7 @@ au BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.make set filetype=make
 au BufNewFile,BufFilePre,BufRead *.jinja set filetype=jinja
 au BufNewFile,BufFilePre,BufRead *.build set filetype=python
+au BufNewFile,BufFilePre,BufRead *.yml set filetype=ansible
 "indentation
 filetype plugin indent on
 let g:user_emmet_install_global = 0
