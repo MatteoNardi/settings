@@ -39,9 +39,6 @@ nnoremap <Leader>. :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<cr>
 
 iab <buffer> unittest <cr>#include <catch.hpp><cr>#include ".h"<cr><cr>TEST_CASE("", "[]"){<cr>REQUIRE(true);<cr>// TODO<cr>}<cr><esc>
 
-map <Leader>k :pyf /usr/share/clang/clang-format-3.8/clang-format.py<cr>
-imap <Leader>k <c-o>:pyf /usr/share/clang/clang-format-3.8/clang-format.py<cr>
-
 let g:clang_rename_path='/usr/bin/clang-rename-3.8'
 noremap <leader>cr :py3f /opt/clang-rename.py<cr>
 
@@ -57,6 +54,7 @@ map = <Plug>(operator-clang-format)
 autocmd FileType c ClangFormatAutoEnable
 autocmd FileType cpp ClangFormatAutoEnable
 autocmd FileType h ClangFormatAutoEnable
+set autoread
 
 autocmd User YcmQuickFixOpened cclose
 map <C-]> :YcmCompleter GoTo<CR>

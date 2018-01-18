@@ -17,6 +17,7 @@ map <C-]> :YcmCompleter GoTo<CR>
 nnoremap <Leader>f :YcmCompleter FixIt<CR>
 nnoremap <F5> :YcmDiags<CR>
 nnoremap <F6> :let g:program="python ".expand("%")<CR>
+nnoremap <F5> :let g:program="python -m unittest"<CR>
 nnoremap <F7> :let g:arguments=
 
 set formatprg=autopep8\ -
