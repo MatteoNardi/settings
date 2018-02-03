@@ -16,3 +16,4 @@ function link() {
 
 link ~/.vimrc vim/vimrc
 link ~/.vim/bundle/my_settings vim
+link ~/.tmux.conf tmux/tmux.conf
