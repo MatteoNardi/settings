@@ -9,9 +9,9 @@ function link() {
     rm "$1"
   elif [ -e "$1" ]
   then
-    rm -ir $2
+    rm -ir $1
   fi
-  ln -sr $2 $1 
+  ln -sr $2 $1
 }
 
 link ~/.vimrc vim/vimrc
