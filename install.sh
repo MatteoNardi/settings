@@ -11,7 +11,7 @@ function link() {
   then
     rm -ir $1
   fi
-  ln -sr $2 $1
+  ln -sr `pwd`/$2 $1
 }
 
 link ~/.vimrc vim/vimrc
