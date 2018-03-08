@@ -21,3 +21,6 @@ link ~/.vim/bundle/my_settings vim
 link ~/.tmux.conf tmux/tmux.conf
 
 sh vim/install.sh
+
+# Keyboard settings
+sudo ansible-playbook keyboard/keyboard.yml

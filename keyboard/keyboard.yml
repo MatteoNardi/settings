@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+
+  - name: Map caps lock to ctrl
+    lineinfile:
+      path: /etc/default/keyboard
+      regexp: '^XKBOPTIONS='
+      line: 'XKBOPTIONS="ctrl:nocaps"'
+      state: present
+
+  - name: Generate b on AC10 level3
+    copy:
+      src: 'us'
+      dest: '/usr/share/X11/xkb/symbols/us'
+
+  - name: ..Make it activable with Control
+    copy:
+      src: 'pc'
+      dest: '/usr/share/X11/xkb/types/pc'
+
+  - name: Make auto-completion case-insensitive
+    lineinfile:
+      name: /etc/inputrc
+      line: 'set completion-ignore-case On'
+      state: present
