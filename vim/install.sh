@@ -20,3 +20,14 @@ then
 	git clone git://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
   git -C ~/.vim/bundle/YouCompleteMe submodule update --init --recursive
 fi
+
+if [ ! -d ~/.vim/bundle/vim-gitgutter ]
+then
+	git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
+fi
+
+if [ ! -d ~/.vim/bundle/vim-fugitive ]
+then
+	git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+fi
+
