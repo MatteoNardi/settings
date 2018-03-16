@@ -9,6 +9,7 @@ execute pathogen#infect()
 set bufhidden=hide
 set wildmenu
 set wildignorecase
+set updatetime=100 "For better performance in vim-githutter
 
 "ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -24,6 +25,7 @@ set number
 
 "mouse support
 set mouse=a
+set ttymouse=xterm2
 
 "statusline
 set showcmd
@@ -124,7 +126,6 @@ au BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.make set filetype=make
 au BufNewFile,BufFilePre,BufRead *.jinja set filetype=jinja
 au BufNewFile,BufFilePre,BufRead *.build set filetype=python
-au BufNewFile,BufFilePre,BufRead *.yml set filetype=ansible
 "indentation
 filetype plugin indent on
 let g:user_emmet_install_global = 0
