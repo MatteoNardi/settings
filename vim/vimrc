@@ -1,10 +1,6 @@
 
 set nocompatible
 
-"phantogen
-set sessionoptions-=options
-execute pathogen#infect()
-
 "buffer
 set bufhidden=hide
 set wildmenu

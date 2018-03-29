@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -e
 
 cd "$(dirname "$0")"
@@ -13,14 +12,15 @@ function link() {
   then
     rm -ir $1
   fi
+  mkdir -p `dirname "$1"`
   ln -sr $2 $1
 }
 
 link ~/.vimrc vim/vimrc
-link ~/.vim/bundle/my_settings vim
+link ~/.vim/pack/my_settings/start/my_settings vim
 link ~/.tmux.conf tmux/tmux.conf
 
-sh vim/install.sh
+bash vim/install.sh
 
 # Keyboard settings
 sudo ansible-playbook keyboard/keyboard.yml

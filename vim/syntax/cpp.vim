@@ -50,10 +50,10 @@ iab <buffer> cls class _CLASS_ {<cr>public:<cr>private:<cr>};<cr><esc>dd
 iab <buffer> #i #include ""<cr><esc>k$i
 iab <buffer> #i #include 
 "clang format
-map = <Plug>(operator-clang-format)
-autocmd FileType c ClangFormatAutoEnable
-autocmd FileType cpp ClangFormatAutoEnable
-autocmd FileType h ClangFormatAutoEnable
+"map = <Plug>(operator-clang-format)
+"autocmd FileType c ClangFormatAutoEnable
+"autocmd FileType cpp ClangFormatAutoEnable
+"autocmd FileType h ClangFormatAutoEnable
 set autoread
 
 autocmd User YcmQuickFixOpened cclose

@@ -1,38 +1,25 @@
+#!/usr/bin/env bash
+#set -x
 
-if [ ! -f ~/.vim/autoload/pathogen.vim ]
-then
-	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-fi
 
-if [ ! -d ~/.vim/bundle/gruvbox ]
-then
-	git clone git://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
-fi
+function install() {
+  repo="git://github.com/$1.git"
+  target=~/.vim/pack/my_settings/start/`basename "$1"`
+  echo "Installing $repo to $target"
+  mkdir -p `dirname "$target"`
+  if [ -d "$target" ]
+  then
+    git -C "$target" pull
+  else
+    git clone "$repo" "$target"
+  fi
+  git -C "$target" submodule update --init --recursive
+}
 
-if [ ! -d ~/.vim/bundle/ctrlp ]
-then
-	git clone git://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp
-fi
-
-if [ ! -d ~/.vim/bundle/YouCompleteMe ]
-then
-	git clone git://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
-  git -C ~/.vim/bundle/YouCompleteMe submodule update --init --recursive
-fi
-
-if [ ! -d ~/.vim/bundle/vim-gitgutter ]
-then
-	git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
-fi
-
-if [ ! -d ~/.vim/bundle/vim-fugitive ]
-then
-	git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
-fi
-
-if [ ! -d ~/.vim/bundle/vim-surround ]
-then
-	git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
-fi
-
+install "rhysd/vim-clang-format"
+install "morhetz/gruvbox"
+install "kien/ctrlp.vim"
+install "Valloric/YouCompleteMe"
+install "airblade/vim-gitgutter"
+install "tpope/vim-fugitive"
+install "tpope/vim-surround"
