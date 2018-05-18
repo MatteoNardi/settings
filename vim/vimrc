@@ -8,7 +8,6 @@ set wildignorecase
 set updatetime=100 "For better performance in vim-githutter
 
 "ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_working_path_mode = 'ra'
 
@@ -95,7 +94,7 @@ set backspace=2
 let mapleader=","
 nnoremap <Leader>vr :so ~/.vimrc<CR>
 nnoremap <Leader>vj :sp ~/.vimrc<CR>
-nnoremap <Leader>vs :execute "sp ~/.vim/bundle/my_settings/syntax/".&ft.".vim"<CR>
+nnoremap <Leader>vs :execute "sp ~/.vim/pack/my_settings/start/my_settings/syntax/".&ft.".vim"<CR>
 
 nnoremap <Leader>/ /<C-R>"<cr>
 
