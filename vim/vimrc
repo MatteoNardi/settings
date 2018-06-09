@@ -109,6 +109,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <Leader>F "gyiw:Ggrep <C-r>g<CR>:copen
 "nnoremap <Leader>s :s/include\ \"/include\ \"printer\//
 nnoremap <Leader>t :r !date +\%F<cr>
+nnoremap <Leader>w :w !sudo tee "%" > /dev/null<cr>
 
 iabbr shebang #!/usr/bin/env
 
