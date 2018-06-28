@@ -49,11 +49,6 @@ iab <buffer> guard #ifndef __BLOCK__CLASS__<cr>#define __BLOCK__CLASS__<cr><cr>#
 iab <buffer> cls class _CLASS_ {<cr>public:<cr>private:<cr>};<cr><esc>dd
 iab <buffer> #i #include ""<cr><esc>k$i
 iab <buffer> #i #include 
-"clang format
-"map = <Plug>(operator-clang-format)
-"autocmd FileType c ClangFormatAutoEnable
-"autocmd FileType cpp ClangFormatAutoEnable
-"autocmd FileType h ClangFormatAutoEnable
 set autoread
 
 autocmd User YcmQuickFixOpened cclose
@@ -68,3 +63,10 @@ if getcwd() == "/home/dev/projects/cisterne"
     let g:program="ninja -C fafnir_daemon/builddir test"
     nnoremap <Leader>e <esc>:!ninja -C fafnir_daemon/builddir -t compdb cpp_COMPILER > fafnir_daemon/compile_commands.json <CR> :YcmRestartServer<CR>
 endif
+
+function! Formatonsave()
+  let l:lines="all"
+  py3f /usr/share/clang/clang-format-6.0/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
