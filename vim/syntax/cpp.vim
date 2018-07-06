@@ -70,3 +70,6 @@ function! Formatonsave()
 endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
+
+nnoremap <Leader>b :diffthis<CR>:vsp<CR>:Gedit matteo:%<CR>:diffthis<CR>
+

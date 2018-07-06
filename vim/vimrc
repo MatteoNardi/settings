@@ -73,16 +73,16 @@ set splitbelow
 set splitright
 
 "diff
-if &diff
-	syntax off
-	set foldmethod=diff
-	highlight Folded cterm=none ctermfg=0
-	nnoremap <Space> ]czz
-	highlight DiffAdd cterm=none ctermfg=2 ctermbg=none
-	highlight DiffDelete cterm=none ctermfg=1 ctermbg=none
-	highlight DiffChange cterm=none ctermfg=3 ctermbg=none
-	highlight DiffText cterm=underline ctermfg=5 ctermbg=none
-endif
+"if &diff
+"	syntax off
+"	set foldmethod=diff
+"	highlight Folded cterm=none ctermfg=0
+"	nnoremap <Space> ]czz
+"	highlight DiffAdd cterm=none ctermfg=2 ctermbg=none
+"	highlight DiffDelete cterm=none ctermfg=1 ctermbg=none
+"	highlight DiffChange cterm=none ctermfg=3 ctermbg=none
+"	highlight DiffText cterm=underline ctermfg=5 ctermbg=none
+"endif
 
 
 "backspace
