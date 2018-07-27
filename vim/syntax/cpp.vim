@@ -9,20 +9,20 @@ set cindent
 set textwidth=100
 
 "folding
-set foldmethod=syntax
-set foldlevel=20
-set fillchars+="fold: "
-highlight Folded ctermbg=none
-set foldtext=MyFoldText()
-function! MyFoldText()
-  let nucolwidth = &fdc + &number*&numberwidth
-  let winwd = winwidth(0) - nucolwidth - 5
-  let foldlinecount = foldclosedend(v:foldstart) - foldclosed(v:foldstart) + 1
-  let fdnfo = "( ".string(foldlinecount)." )"
-  let line =  strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
-  let fillcharcount = 90 - len(line) - len(fdnfo)
-  return line . repeat(" ",fillcharcount) . fdnfo
-endfunction
+"set foldmethod=syntax
+"set foldlevel=20
+"set fillchars+="fold: "
+"highlight Folded ctermbg=none
+"set foldtext=MyFoldText()
+"function! MyFoldText()
+"  let nucolwidth = &fdc + &number*&numberwidth
+"  let winwd = winwidth(0) - nucolwidth - 5
+"  let foldlinecount = foldclosedend(v:foldstart) - foldclosed(v:foldstart) + 1
+"  let fdnfo = "( ".string(foldlinecount)." )"
+"  let line =  strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
+"  let fillcharcount = 90 - len(line) - len(fdnfo)
+"  return line . repeat(" ",fillcharcount) . fdnfo
+"endfunction
 
 "mac specific
 set makeprg=make
