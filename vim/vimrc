@@ -119,7 +119,6 @@ if filereadable(".custom_vimrc")
 endif
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-au BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.make set filetype=make
 au BufNewFile,BufFilePre,BufRead *.jinja set filetype=jinja
 au BufNewFile,BufFilePre,BufRead *.build set filetype=python

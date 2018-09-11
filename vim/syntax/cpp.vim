@@ -39,10 +39,6 @@ nnoremap <Leader>. :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<cr>
 
 iab <buffer> unittest <cr>#include <catch.hpp><cr>#include ".h"<cr><cr>TEST_CASE("", "[]"){<cr>REQUIRE(true);<cr>// TODO<cr>}<cr><esc>
 
-let g:clang_rename_path='/usr/bin/clang-rename-3.8'
-noremap <leader>cr :py3f /opt/clang-rename.py<cr>
-
-
 nnoremap <Leader>p lBistd::auto_ptr<<esc>Ea><esc>b
 "abbreviations
 iab <buffer> guard #ifndef __BLOCK__CLASS__<cr>#define __BLOCK__CLASS__<cr><cr>#endif
@@ -64,12 +60,7 @@ if getcwd() == "/home/dev/projects/cisterne"
     nnoremap <Leader>e <esc>:!ninja -C fafnir_daemon/builddir -t compdb cpp_COMPILER > fafnir_daemon/compile_commands.json <CR> :YcmRestartServer<CR>
 endif
 
-function! Formatonsave()
-  let l:lines="all"
-  py3f /usr/share/clang/clang-format-6.0/clang-format.py
-endfunction
-autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
-
+ClangFormatAutoEnable
 
 nnoremap <Leader>b :diffthis<CR>:vsp<CR>:Gedit matteo:%<CR>:diffthis<CR>
 
