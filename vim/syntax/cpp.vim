@@ -39,12 +39,14 @@ nnoremap <Leader>. :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<cr>
 
 iab <buffer> unittest <cr>#include <catch.hpp><cr>#include ".h"<cr><cr>TEST_CASE("", "[]"){<cr>REQUIRE(true);<cr>// TODO<cr>}<cr><esc>
 
-nnoremap <Leader>p lBistd::auto_ptr<<esc>Ea><esc>b
+nnoremap <Leader>p lBistd::unique_ptr<<esc>Ea><esc>b
 "abbreviations
 iab <buffer> guard #ifndef __BLOCK__CLASS__<cr>#define __BLOCK__CLASS__<cr><cr>#endif
 iab <buffer> cls class _CLASS_ {<cr>public:<cr>private:<cr>};<cr><esc>dd
 iab <buffer> #i #include ""<cr><esc>k$i
 iab <buffer> #i #include 
+iab <buffer> nocopy L(L const &) = delete;<cr>void operator=(L const &) = delete;<cr>L(L const &&) = delete;<cr>void operator=(L const &&) = delete;
+
 set autoread
 
 autocmd User YcmQuickFixOpened cclose

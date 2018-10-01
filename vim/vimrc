@@ -106,6 +106,7 @@ let g:ycm_key_detailed_diagnostics = '<Leader>v'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_use_ultisnips_completer = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_max_diagnostics_to_display = 5
 " GlobalFind
 nnoremap <Leader>F "gyiw:Ggrep <C-r>g<CR>:copen
 "nnoremap <Leader>s :s/include\ \"/include\ \"printer\//
