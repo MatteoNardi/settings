@@ -47,18 +47,6 @@ set termguicolors
 set t_ut=
 syntax enable
 call ChangeColorscheme()
-"cycle colors
-" set t_Co=16
-"colorscheme smyck
-"set cursorline
-"hi clear CursorLine
-"hi ColorColumn ctermbg=none ctermfg=lightred cterm=bold
-"hi clear VertSplit
-"hi VertSplit ctermfg=grey term=NONE
-"set fillchars=vert:\|
-
-"spellchecking
-"set spell
 
 "show invisibles
 set list listchars=tab:»·,trail:·,extends:·,precedes:·
@@ -76,23 +64,9 @@ set hlsearch
 set splitbelow
 set splitright
 
-"diff
-"if &diff
-"	syntax off
-"	set foldmethod=diff
-"	highlight Folded cterm=none ctermfg=0
-"	nnoremap <Space> ]czz
-"	highlight DiffAdd cterm=none ctermfg=2 ctermbg=none
-"	highlight DiffDelete cterm=none ctermfg=1 ctermbg=none
-"	highlight DiffChange cterm=none ctermfg=3 ctermbg=none
-"	highlight DiffText cterm=underline ctermfg=5 ctermbg=none
-"endif
-
-
 "backspace
 set backspace=indent,eol,start
 set backspace=2
-
 
 "===== Shortcuts =====
 let mapleader=","
@@ -100,17 +74,16 @@ nnoremap <Leader>vr :so ~/.vimrc<CR>
 nnoremap <Leader>vj :sp ~/.vimrc<CR>
 nnoremap <Leader>vs :execute "sp ~/.vim/pack/my_settings/start/my_settings/syntax/".&ft.".vim"<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
-
 nnoremap <Leader>/ /<C-R>"<cr>
-
-
 nnoremap <Leader>a :w<CR>:make<CR>
+
 let g:ycm_python_binary_path = 'python'
 let g:ycm_key_detailed_diagnostics = '<Leader>v'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_use_ultisnips_completer = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_max_diagnostics_to_display = 5
+let g:ycm_max_diagnostics_to_display = 10
+
 " GlobalFind
 nnoremap <Leader>F "gyiw:Ggrep <C-r>g<CR>:copen
 "nnoremap <Leader>s :s/include\ \"/include\ \"printer\//

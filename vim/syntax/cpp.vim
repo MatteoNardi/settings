@@ -5,29 +5,7 @@ set shiftwidth=2
 set softtabstop=2
 set smarttab
 set cindent
-"set colorcolumn=101
 set textwidth=100
-
-"folding
-"set foldmethod=syntax
-"set foldlevel=20
-"set fillchars+="fold: "
-"highlight Folded ctermbg=none
-"set foldtext=MyFoldText()
-"function! MyFoldText()
-"  let nucolwidth = &fdc + &number*&numberwidth
-"  let winwd = winwidth(0) - nucolwidth - 5
-"  let foldlinecount = foldclosedend(v:foldstart) - foldclosed(v:foldstart) + 1
-"  let fdnfo = "( ".string(foldlinecount)." )"
-"  let line =  strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
-"  let fillcharcount = 90 - len(line) - len(fdnfo)
-"  return line . repeat(" ",fillcharcount) . fdnfo
-"endfunction
-
-"mac specific
-set makeprg=make
-:command! NoWarnings set errorformat^=%-G%f:%l:\ warning:%m
-:command! Warnings set errorformat^=\ 
 
 "backspace
 set backspace=2
@@ -56,13 +34,8 @@ nnoremap <F5> :YcmDiags<CR>
 
 "let g:ycm_always_populate_location_list = 1
 
-if getcwd() == "/home/dev/projects/cisterne"
-    " let g:program="ninja -C fafnir_daemon/builddir && ./fafnir_daemon/builddir/fafnir_daemon"
-    let g:program="ninja -C fafnir_daemon/builddir test"
-    nnoremap <Leader>e <esc>:!ninja -C fafnir_daemon/builddir -t compdb cpp_COMPILER > fafnir_daemon/compile_commands.json <CR> :YcmRestartServer<CR>
-endif
-
 ClangFormatAutoEnable
 
 nnoremap <Leader>b :diffthis<CR>:vsp<CR>:Gedit matteo:%<CR>:diffthis<CR>
+nnoremap <Leader>l :diffthis<CR>:vsp<CR>:Gedit lizard:%<CR>:diffthis<CR>
 
