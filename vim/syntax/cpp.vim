@@ -30,7 +30,7 @@ set autoread
 autocmd User YcmQuickFixOpened cclose
 map <C-]> :YcmCompleter GoTo<CR>
 nnoremap <Leader>f :YcmCompleter FixIt<CR>
-nnoremap <F5> :YcmDiags<CR>
+nnoremap <Leader>c :YcmDiags<CR>
 
 "let g:ycm_always_populate_location_list = 1
 

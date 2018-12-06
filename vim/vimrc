@@ -42,6 +42,8 @@ let g:gruvbox_italic=1
 
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
+set t_Cs="\e[4:3m"
+set t_Ce="\e[4:0m"
 set termguicolors
 
 set t_ut=
