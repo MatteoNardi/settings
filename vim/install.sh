@@ -18,7 +18,7 @@ function install() {
 
 install "rhysd/vim-clang-format"
 install "morhetz/gruvbox"
-install "kien/ctrlp.vim"
+install "ctrlpvim/ctrlp.vim"
 install "Valloric/YouCompleteMe"
 install "airblade/vim-gitgutter"
 install "tpope/vim-fugitive"

@@ -19,11 +19,11 @@ iab <buffer> unittest <cr>#include <catch.hpp><cr>#include ".h"<cr><cr>TEST_CASE
 
 nnoremap <Leader>p lBistd::unique_ptr<<esc>Ea><esc>b
 "abbreviations
-iab <buffer> guard #ifndef __BLOCK__CLASS__<cr>#define __BLOCK__CLASS__<cr><cr>#endif
 iab <buffer> cls class _CLASS_ {<cr>public:<cr>private:<cr>};<cr><esc>dd
 iab <buffer> #i #include ""<cr><esc>k$i
 iab <buffer> #i #include 
 iab <buffer> nocopy L(L const &) = delete;<cr>void operator=(L const &) = delete;<cr>L(L const &&) = delete;<cr>void operator=(L const &&) = delete;
+iab <buffer> pimpl class Impl;<cr>std::unique_ptr<Impl> m_impl;
 
 set autoread
 

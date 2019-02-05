@@ -104,8 +104,6 @@ au BufNewFile,BufFilePre,BufRead *.jinja set filetype=jinja
 au BufNewFile,BufFilePre,BufRead *.build set filetype=python
 "indentation
 filetype plugin indent on
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 
 " Compilation
