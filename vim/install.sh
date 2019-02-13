@@ -16,6 +16,7 @@ function install() {
   git -C "$target" submodule update --init --recursive
 }
 
+install "prettier/vim-prettier"
 install "rhysd/vim-clang-format"
 install "morhetz/gruvbox"
 install "ctrlpvim/ctrlp.vim"
