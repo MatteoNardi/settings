@@ -26,6 +26,7 @@ install "tpope/vim-fugitive"
 install "tpope/vim-surround"
 install "scrooloose/nerdtree"
 install "albfan/nerdtree-git-plugin"
+install "rust-lang/rust.vim"
 
-cd /home/dev/.vim/pack/my_settings/start/YouCompleteMe/
-/usr/bin/python install.py --clang-completer
+cd ~/.vim/pack/my_settings/start/YouCompleteMe/
+/usr/bin/python install.py --clang-completer --rust-completer
