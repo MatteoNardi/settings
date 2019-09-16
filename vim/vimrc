@@ -10,6 +10,7 @@ set updatetime=100 "For better performance in vim-githutter
 "ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['package.json', "Cargo.toml"]
 
 "encoding
 scriptencoding utf-8

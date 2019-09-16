@@ -36,6 +36,5 @@ nnoremap <Leader>c :YcmDiags<CR>
 
 ClangFormatAutoEnable
 
-nnoremap <Leader>b :diffthis<CR>:vsp<CR>:Gedit matteo:%<CR>:diffthis<CR>
-nnoremap <Leader>l :diffthis<CR>:vsp<CR>:Gedit lizard:%<CR>:diffthis<CR>
+nnoremap <Leader>b :diffthis<CR>:vsp<CR>:Gedit origin/matteo:%<CR>:diffthis<CR>
 
