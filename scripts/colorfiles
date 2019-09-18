@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Simple script to color git files, useful with backtraces.
+# Example usage:
+# RUST_BACKTRACE=1 cargo test -- --nocapture 2>&1 | colorfiles
+
+grep --color=auto -E "$(for i in $(git ls-files) ; do echo -ne " $i|"; done)"
