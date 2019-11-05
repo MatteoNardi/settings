@@ -1,0 +1,10 @@
+[Unit]
+Description = Home Assistant
+After = network-online.target
+
+[Service]
+Type = simple
+ExecStart = /srv/homeassistant/bin/hass -c "%h/.homeassistant"
+
+[Install]
+WantedBy = default.target

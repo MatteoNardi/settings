@@ -1,0 +1,11 @@
+[Unit]
+Description = Stop all
+Conflicts = steamlink.service kodi.service
+
+[Service]
+Type = simple
+WorkingDirectory=/home/babel
+ExecStartPre=fbset -depth 16
+ExecStart = /home/babel/svgsaver
+Restart=always
+RestartSec=16s

@@ -1,0 +1,15 @@
+[Unit]
+Description=Switch audio to bluetooth
+#Conflicts=audio-hdmi audio-line-out
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/sh -c "\
+                      echo Switching audio to bluetooth\
+                      "
+ExecStop=/bin/sh -c "\
+                      echo Stopping bluetooth\
+                      "
+
+

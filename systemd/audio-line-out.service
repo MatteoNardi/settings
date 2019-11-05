@@ -1,0 +1,15 @@
+[Unit]
+Description=Switch audio to line out
+#Conflicts=audio-hdmi audio-bluetooth
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/sh -c "\
+                      echo Switching audio to line out\
+                      "
+ExecStop=/bin/sh -c "\
+                      echo Stopping line out\
+                      "
+
+
