@@ -1,4 +1,4 @@
-
+set term=xterm-256color
 set nocompatible
 
 "buffer
@@ -10,6 +10,7 @@ set updatetime=100 "For better performance in vim-githutter
 "ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['package.json', "Cargo.toml"]
 
 "encoding
 scriptencoding utf-8
@@ -88,23 +89,14 @@ let g:ycm_max_diagnostics_to_display = 10
 
 " GlobalFind
 nnoremap <Leader>F "gyiw:Ggrep <C-r>g<CR>:copen
-"nnoremap <Leader>s :s/include\ \"/include\ \"printer\//
-nnoremap <Leader>t :r !date +\%F<cr>
 nnoremap <Leader>w :w !sudo tee "%" > /dev/null<cr>
-
 iabbr shebang #!/usr/bin/env
 
-if filereadable(".custom_vimrc")
-	so .custom_vimrc
-endif
-
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-au BufNewFile,BufFilePre,BufRead *.make set filetype=make
 au BufNewFile,BufFilePre,BufRead *.jinja set filetype=jinja
 au BufNewFile,BufFilePre,BufRead *.build set filetype=python
 "indentation
 filetype plugin indent on
-
 
 " Compilation
 " let g:program="echo No program set"
