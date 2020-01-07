@@ -1,0 +1,13 @@
+[Unit]
+Description = Kodi Media Center
+After = systemd-user-sessions.service network.target sound.target
+Conflicts = steamlink.service
+
+[Service]
+Type = simple
+ExecStart = /usr/bin/kodi-standalone
+Restart = always
+RestartSec = 15
+
+[Install]
+WantedBy = default.target

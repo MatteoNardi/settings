@@ -20,6 +20,9 @@ link ~/.vimrc vim/vimrc
 link ~/.vim/pack/my_settings/start/my_settings vim
 link ~/.tmux.conf tmux/tmux.conf
 
+link ~/.config/systemd/user systemd
+systemctl --user daemon-reload
+
 bash vim/install.sh
 
 # Keyboard settings
