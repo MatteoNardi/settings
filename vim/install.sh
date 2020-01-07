@@ -31,4 +31,4 @@ install "sirver/ultisnips"
 install "honza/vim-snippets"
 
 cd ~/.vim/pack/my_settings/start/YouCompleteMe/
-/usr/bin/python install.py --clang-completer --rust-completer
+/usr/bin/python install.py --clang-completer --rust-completer --cs-completer
