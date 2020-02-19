@@ -82,7 +82,12 @@ nnoremap <Leader>a :w<CR>:make<CR>
 
 "==== YouCompleteMe  ====
 "let $RUSTFLAGS="$RUSTFLAGS -A dead_code" 
-let g:ycm_python_binary_path = 'python'
+"let g:ycm_rls_binary_path = '/home/dev/.cargo/bin/rls/'
+"let g:ycm_rls_binary_path = '/home/dev/.vim/pack/my_settings/start/YouCompleteMe/third_party/ycmd/third_party/rls/bin/rls'
+let g:ycm_rustc_binary_path = 'rustc'
+let g:ycm_rls_binary_path = 'rls'
+"let g:ycm_log_level = 'debug'
+let g:ycm_python_binary_path = 'python3'
 let g:ycm_key_detailed_diagnostics = '<Leader>v'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_use_ultisnips_completer = 1
