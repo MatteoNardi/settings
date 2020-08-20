@@ -30,5 +30,9 @@ install "rust-lang/rust.vim"
 install "sirver/ultisnips"
 install "honza/vim-snippets"
 
-cd ~/.vim/pack/my_settings/start/YouCompleteMe/
-/usr/bin/python install.py --clang-completer --rust-completer --cs-completer
+#cd ~/.vim/pack/my_settings/start/YouCompleteMe/
+#/usr/bin/python install.py --clang-completer
+
+#mkdir -p ~/.vim/pack/coc/start
+#cd ~/.vim/pack/coc/start
+#curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
