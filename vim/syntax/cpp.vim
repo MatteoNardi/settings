@@ -28,7 +28,6 @@ iab <buffer> pimpl class Impl;<cr>std::unique_ptr<Impl> m_impl;
 set autoread
 
 autocmd User YcmQuickFixOpened cclose
-map <C-]> :YcmCompleter GoTo<CR>
 nnoremap <Leader>f :YcmCompleter FixIt<CR>
 nnoremap <Leader>c :YcmDiags<CR>
 

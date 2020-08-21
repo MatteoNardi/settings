@@ -20,8 +20,8 @@ install "prettier/vim-prettier"
 install "rhysd/vim-clang-format"
 install "morhetz/gruvbox"
 install "ctrlpvim/ctrlp.vim"
-install "Valloric/YouCompleteMe"
-install "airblade/vim-gitgutter"
+#install "Valloric/YouCompleteMe"
+#install "airblade/vim-gitgutter"
 install "tpope/vim-fugitive"
 install "tpope/vim-surround"
 install "scrooloose/nerdtree"
@@ -33,6 +33,6 @@ install "honza/vim-snippets"
 #cd ~/.vim/pack/my_settings/start/YouCompleteMe/
 #/usr/bin/python install.py --clang-completer
 
-#mkdir -p ~/.vim/pack/coc/start
-#cd ~/.vim/pack/coc/start
-#curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
+mkdir -p ~/.vim/pack/coc/start
+cd ~/.vim/pack/coc/start
+curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
