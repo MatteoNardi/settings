@@ -276,3 +276,4 @@ autocmd CursorHold * CocCommand git.refresh
 " :CocInstall coc-git
 " :CocInstall coc-rust-analyzer
 " :CocInstall coc-clangd
+" :CocCommand clangd.install 
