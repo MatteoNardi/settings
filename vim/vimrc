@@ -1,3 +1,17 @@
+call plug#begin('~/.vim/plugged')
+Plug 'prettier/vim-prettier'
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'rust-lang/rust.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'junegunn/fzf'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+" :CocInstall coc-git coc-rust-analyzer coc-clangd clangd.install
+" :PlugInstall
+
 set term=xterm-256color
 set nocompatible
 
@@ -6,11 +20,6 @@ set bufhidden=hide
 set wildmenu
 set wildignorecase
 set updatetime=100 "For better performance in vim-githutter
-
-"ctrlp
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_root_markers = ['package.json', "Cargo.toml"]
 
 "encoding
 scriptencoding utf-8
@@ -80,36 +89,14 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>/ /<C-R>"<cr>
 nnoremap <Leader>a :w<CR>:make<CR>
 
-"==== YouCompleteMe  ====
-"let $RUSTFLAGS="$RUSTFLAGS -A dead_code" 
-"let g:ycm_rls_binary_path = '/home/dev/.cargo/bin/rls/'
-"let g:ycm_rls_binary_path = '/home/dev/.vim/pack/my_settings/start/YouCompleteMe/third_party/ycmd/third_party/rls/bin/rls'
-"
-" let g:ycm_rustc_binary_path = 'rustc'
-" let g:ycm_rls_binary_path = 'rls'
-"let g:ycm_log_level = 'debug'
-let g:ycm_python_binary_path = 'python3'
-let g:ycm_key_detailed_diagnostics = '<Leader>v'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_use_ultisnips_completer = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_max_diagnostics_to_display = 10
-let g:ycm_language_server =
-\ [
-\   {
-\     'name': 'rust',
-\     'cmdline': ['rust-analyzer'],
-\     'filetypes': ['rust'],
-\     'project_root_files': ['Cargo.toml']
-\   }
-\ ]
+" fxf
+let $FZF_DEFAULT_COMMAND = 'fd --type f'
+nmap <C-p> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-v': 'split',
+  \ 'ctrl-g': 'vsplit' }
 
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" GlobalFind
-nnoremap <Leader>F "gyiw:Ggrep <C-r>g<CR>:copen
 nnoremap <Leader>w :w !sudo tee "%" > /dev/null<cr>
 iabbr shebang #!/usr/bin/env
 
@@ -273,7 +260,3 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 autocmd CursorHold * CocCommand git.refresh
-" :CocInstall coc-git
-" :CocInstall coc-rust-analyzer
-" :CocInstall coc-clangd
-" :CocCommand clangd.install 
