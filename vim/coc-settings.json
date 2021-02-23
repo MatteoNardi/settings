@@ -4,5 +4,6 @@
 "git.removedSign.hlGroup": "GitGutterDelete",
 "git.topRemovedSign.hlGroup": "GitGutterDelete",
 "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-"rust-analyzer.cargoFeatures.loadOutDirsFromCheck": true
+"rust-analyzer.cargoFeatures.loadOutDirsFromCheck": true,
+"rust-analyzer.cargo.loadOutDirsFromCheck": true
 }

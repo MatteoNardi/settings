@@ -1,10 +1,10 @@
-set colorcolumn=999
+"set colorcolumn=999
 set foldlevel=100
 
 nnoremap <F5> :silent! !bash --login -c 'preview % &'<CR>:redraw!<CR>
 
-set tw=90
-set colorcolumn=90
+set tw=80
+set colorcolumn=81
 
 set expandtab
 set shiftwidth=4
