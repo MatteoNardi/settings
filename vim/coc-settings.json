@@ -1,5 +1,5 @@
 {
-	"git.addedSign.hlGroup": "GitGutterAdd",
+"git.addedSign.hlGroup": "GitGutterAdd",
 "git.changedSign.hlGroup": "GitGutterChange",
 "git.removedSign.hlGroup": "GitGutterDelete",
 "git.topRemovedSign.hlGroup": "GitGutterDelete",

@@ -11,8 +11,9 @@ set textwidth=100
 set backspace=2
 
 " 3 way open .h .cpp .test.cpp
-nnoremap <Leader>3 :e! %:r:r.h<cr> :sp %:r:r.cpp<cr> :sp %:r:r.test.cpp<cr>
 nnoremap <Leader>2 :e! %:r:r.h<cr> :sp %:r:r.cpp<cr>
+nnoremap <Leader>3 :e! %:r:r.h<cr> :sp %:r:r.cpp<cr> :sp %:r:r.test.cpp<cr>
+nnoremap <Leader>4 :e! %:h:h/include/%:t:r.h<cr> :sp %:h:h/src/%:t:r.cpp<cr>
 nnoremap <Leader>. :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<cr>
 
 iab <buffer> unittest <cr>#include <catch.hpp><cr>#include ".h"<cr><cr>TEST_CASE("", "[]"){<cr>REQUIRE(true);<cr>// TODO<cr>}<cr><esc>

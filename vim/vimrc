@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'prettier/vim-prettier'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
@@ -10,7 +9,9 @@ Plug 'junegunn/fzf'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 " :CocInstall coc-git coc-rust-analyzer coc-clangd clangd.install
+" :CocInstall coc-prettier coc-tsserver
 " :PlugInstall
+
 
 set term=xterm-256color
 set nocompatible
@@ -116,6 +117,7 @@ nnoremap <F8> :execute(":!clear && " . g:program . " " . g:arguments)<CR>
 
 
 " coc.nvim
+nmap <leader>p <Plug>(coc-format)
 
 set hidden " TextEdit might fail if hidden is not set.
 " Some servers have issues with backup files, see #649.
