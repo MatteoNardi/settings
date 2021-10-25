@@ -10,4 +10,4 @@ set expandtab
 set shiftwidth=4
 set softtabstop=2
 set smarttab
-set spell
+"set spell

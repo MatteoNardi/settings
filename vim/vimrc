@@ -89,6 +89,8 @@ nnoremap <Leader>vs :execute "sp ~/.vim/pack/my_settings/start/my_settings/synta
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>/ /<C-R>"<cr>
 nnoremap <Leader>a :w<CR>:make<CR>
+nnoremap <Leader>w :w !sudo tee "%" > /dev/null<cr>
+nnoremap <Leader>cd :lcd %:p:h<cr>
 
 " fxf
 let $FZF_DEFAULT_COMMAND = 'fd --type f'
@@ -98,12 +100,10 @@ let g:fzf_action = {
   \ 'ctrl-v': 'split',
   \ 'ctrl-g': 'vsplit' }
 
-nnoremap <Leader>w :w !sudo tee "%" > /dev/null<cr>
 iabbr shebang #!/usr/bin/env
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.jinja set filetype=jinja
-au BufNewFile,BufFilePre,BufRead *.build set filetype=python
 "indentation
 filetype plugin indent on
 
@@ -262,3 +262,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 autocmd CursorHold * CocCommand git.refresh
+
+
+
+" Rust - Create folds
+let g:rust_fold = 1
