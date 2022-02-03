@@ -1,9 +1,11 @@
 {
+"coc.preferences.formatOnSaveFiletypes": ["rust"],
 "git.addedSign.hlGroup": "GitGutterAdd",
 "git.changedSign.hlGroup": "GitGutterChange",
 "git.removedSign.hlGroup": "GitGutterDelete",
 "git.topRemovedSign.hlGroup": "GitGutterDelete",
 "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
 "rust-analyzer.cargoFeatures.loadOutDirsFromCheck": true,
-"rust-analyzer.cargo.loadOutDirsFromCheck": true
+"rust-analyzer.cargo.loadOutDirsFromCheck": true,
+"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

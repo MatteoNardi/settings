@@ -11,6 +11,7 @@ call plug#end()
 " :CocInstall coc-git coc-rust-analyzer coc-clangd clangd.install
 " :CocInstall coc-prettier coc-tsserver
 " :PlugInstall
+" sudo apt-get install nodejs npm
 
 
 set term=xterm-256color
@@ -261,7 +262,7 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-autocmd CursorHold * CocCommand git.refresh
+"autocmd CursorHold * CocCommand git.refresh
 
 
 
