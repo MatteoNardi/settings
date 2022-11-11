@@ -6,12 +6,11 @@ local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-keymap("n", "<Leader>vr", ":source $MYVIMRC<CR>", opts)
-keymap("n", "<Leader>r", ":echo \"RRRRRR\"<CR>", opts)
-keymap("n", "<Leader>e", ":echo \"EEEEEE\"<CR>", opts)
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+-- TODO: try space as leader key
+-- vim.g.mapleader = " "
+-- vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -69,4 +68,18 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+
+function _G.ReloadConfig()
+  for name,_ in pairs(package.loaded) do
+    if name:match('^babel') then
+      package.loaded[name] = nil
+    end
+  end
+
+  dofile(vim.env.MYVIMRC)
+end
+
+keymap("n", "<Leader>vr", ":lua ReloadConfig()<CR>", opts)
+keymap("n", "<Leader>vj", ":e $MYVIMRC<CR>", opts)
 
