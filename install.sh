@@ -25,6 +25,7 @@ link ~/.config/systemd/user systemd
 systemctl --user daemon-reload
 
 bash vim/install.sh
+link ~/.config/nvim nvim
 
 # Keyboard settings
-sudo ansible-playbook keyboard/keyboard.yml
+# sudo ansible-playbook keyboard/keyboard.yml
