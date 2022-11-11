@@ -4,6 +4,7 @@ local ensure_packer = function()
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    print("Installing packer close and reopen Neovim...")
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -39,18 +40,17 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
   -- Color schemes
   use "EdenEast/nightfox.nvim"
-  use "ellisonleao/gruvbox.nvim"
   use "sainnhe/gruvbox-material"
 
   -- Initial installation sync:
-  if PACKER_BOOTSTRAP then
+  if packer_bootstrap then
 	  require("packer").sync()
   end
 
-	-- use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
 	-- use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
 	-- use({ "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" })
 	-- use({ "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" })
