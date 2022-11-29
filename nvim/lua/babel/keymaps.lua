@@ -80,6 +80,36 @@ function _G.ReloadConfig()
   dofile(vim.env.MYVIMRC)
 end
 
+-- Configuration editing
 keymap("n", "<Leader>vr", ":lua ReloadConfig()<CR>", opts)
-keymap("n", "<Leader>vj", ":e $MYVIMRC<CR>", opts)
+keymap("n", "<Leader>vj", ":sp $MYVIMRC<CR>:lcd %:p:h<CR>", opts)
 
+-- Moving in folders
+keymap("n", "<Leader>cd", ":cd %:p:h<CR>", opts) -- global cd
+keymap("n", "<Leader>lcd", ":lcd %:p:h<CR>", opts) -- local cd
+
+-- Telescope Fuzzy finder
+-- Should check pickers every now and then (git_status, git_commits, diagnostics)
+local tele = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', tele.find_files, {})
+vim.keymap.set('n', '<leader>ff', tele.find_files, {})
+vim.keymap.set('n', '<leader>fg', tele.live_grep, {})
+vim.keymap.set('n', '<leader>fb', tele.buffers, {})
+vim.keymap.set('n', '<leader>fh', tele.help_tags, {})
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      i = {
+        -- <C-/>: help
+        -- <C-d>/<C-u>: scroll file
+        -- <Tab>: toggle selection
+        ["<C-g>"] = "select_vertical",
+        ["<C-v>"] = "select_horizontal",
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
+      }
+    }
+  },
+  pickers = {},
+  extensions = {}
+}
