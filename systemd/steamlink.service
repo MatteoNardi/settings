@@ -1,6 +1,0 @@
-[Unit]
-Description = Steam Link
-
-[Service]
-Type = simple
-ExecStart = /usr/bin/steamlink
