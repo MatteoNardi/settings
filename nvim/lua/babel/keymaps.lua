@@ -85,13 +85,13 @@ keymap("n", "<Leader>vr", ":lua ReloadConfig()<CR>", opts)
 keymap("n", "<Leader>vj", ":sp $MYVIMRC<CR>:lcd %:p:h<CR>", opts)
 
 -- Moving in folders
-keymap("n", "<Leader>cd", ":cd %:p:h<CR>", opts) -- global cd
-keymap("n", "<Leader>lcd", ":lcd %:p:h<CR>", opts) -- local cd
+keymap("n", "<Leader>cd", ":lcd %:p:h<CR>", opts) -- local cd
+keymap("n", "<Leader>gcd", ":cd %:p:h<CR>", opts) -- global cd
 
 -- Telescope Fuzzy finder
 -- Should check pickers every now and then (git_status, git_commits, diagnostics)
 local tele = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', tele.find_files, {})
+vim.keymap.set('n', '<C-p>', tele.git_files, {})
 vim.keymap.set('n', '<leader>ff', tele.find_files, {})
 vim.keymap.set('n', '<leader>fg', tele.live_grep, {})
 vim.keymap.set('n', '<leader>fb', tele.buffers, {})
@@ -113,3 +113,6 @@ require('telescope').setup{
   pickers = {},
   extensions = {}
 }
+
+-- Trigger autocompletion on Ctrl-Space
+keymap("i", "<c-space>", "<c-x><c-o>", { noremap = true, silent = true })

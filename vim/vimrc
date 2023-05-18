@@ -40,16 +40,16 @@ set laststatus=2
 set noruler
 
 "colorscheme
-let g:color_list=[['gruvbox', 'dark'], ['gruvbox', 'light'], ['smyck', 'dark']]
-let g:color_current=-1
-function! ChangeColorscheme()
-	let g:color_current = (g:color_current + 1) % len(g:color_list)
-	let c = g:color_list[g:color_current]
-	execute('set background=' . c[1])
-	execute('colorscheme ' . c[0])
-endfunction
-nnoremap <silent> <F3> :call ChangeColorscheme()<CR>
-let g:gruvbox_italic=1
+" let g:color_list=[['gruvbox', 'dark'], ['gruvbox', 'light'], ['smyck', 'dark']]
+" let g:color_current=-1
+" function! ChangeColorscheme()
+" 	let g:color_current = (g:color_current + 1) % len(g:color_list)
+" 	let c = g:color_list[g:color_current]
+" 	execute('set background=' . c[1])
+" 	execute('colorscheme ' . c[0])
+" endfunction
+" nnoremap <silent> <F3> :call ChangeColorscheme()<CR>
+" let g:gruvbox_italic=1
 
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
