@@ -58,11 +58,11 @@ return packer.startup(function(use)
   }
 
   -- telescope fuzzy finder
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.8', requires = { {'nvim-lua/plenary.nvim'} } }
 
   -- Git
   use { 'tpope/vim-fugitive' }
-  use { 'lewis6991/gitsigns.nvim', tag = 'release',
+  use { 'lewis6991/gitsigns.nvim',
     config = function() require('gitsigns').setup() end
   }
 
