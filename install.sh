@@ -20,4 +20,4 @@ link ~/.config/xkb xkb
 link ~/.tmux.conf tmux/tmux.conf
 link ~/.config/nvim nvim
 
-dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier', 'lv3:ralt_switch', 'custom:foo']"
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier', 'lv3:ralt_switch', 'custom:wombo']"
