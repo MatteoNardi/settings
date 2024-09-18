@@ -16,16 +16,8 @@ function link() {
   ln -sr $2 $1
 }
 
-link ~/.vimrc vim/vimrc
-link ~/.vim/coc-settings.json vim/coc-settings.json
-link ~/.vim/pack/my_settings/start/my_settings vim
+link ~/.config/xkb xkb
 link ~/.tmux.conf tmux/tmux.conf
-
-link ~/.config/systemd/user systemd
-systemctl --user daemon-reload
-
-bash vim/install.sh
 link ~/.config/nvim nvim
 
-# Keyboard settings
-# sudo ansible-playbook keyboard/keyboard.yml
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier', 'lv3:ralt_switch', 'custom:foo']"

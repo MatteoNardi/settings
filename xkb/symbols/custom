@@ -1,0 +1,4 @@
+partial alphanumeric_keys
+xkb_symbols "wombo" {
+    key <AC10> { type="EIGHT_LEVEL_BY_CTRL", symbols[Group1]= [ semicolon, colon, b, b, b, b ] };
+};

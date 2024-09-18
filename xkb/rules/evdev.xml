@@ -1,0 +1,19 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <optionList>
+    <group allowMultipleSelection="true">
+      <configItem>
+        <name>custom</name>
+        <description>Custom options</description>
+      </configItem>
+      <option>
+      <configItem>
+        <name>custom:wombo</name>
+        <description>Wombo Combo extension</description>
+      </configItem>
+      </option>
+    </group>
+  </optionList>
+</xkbConfigRegistry>

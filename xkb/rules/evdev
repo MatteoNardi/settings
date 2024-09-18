@@ -1,0 +1,5 @@
+
+! option                =       symbols
+  custom:wombo          =       +custom(wombo)
+
+! include %S/evdev
