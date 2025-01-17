@@ -69,6 +69,7 @@ return packer.startup(function(use)
   -- autocompletion
   use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
+  use 'Canop/nvim-bacon'
 
   -- snippets/completion
   use 'hrsh7th/nvim-cmp'

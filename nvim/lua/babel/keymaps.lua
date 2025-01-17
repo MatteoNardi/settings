@@ -84,6 +84,7 @@ end
 keymap("n", "<Leader>vr", ":lua ReloadConfig()<CR>", opts)
 keymap("n", "<Leader>vj", ":sp $MYVIMRC<CR>:lcd %:p:h<CR>", opts)
 
+
 -- Moving in folders
 keymap("n", "<Leader>cd", ":lcd %:p:h<CR>", opts) -- local cd
 keymap("n", "<Leader>gcd", ":cd %:p:h<CR>", opts) -- global cd
@@ -113,6 +114,9 @@ require('telescope').setup{
   pickers = {},
   extensions = {}
 }
+
+-- Bacon quickfind
+keymap("n", "<Leader>.", ":BaconLoad<CR>:w<CR>:BaconNext<CR>", opts)
 
 -- Trigger autocompletion on Ctrl-Space
 keymap("i", "<c-space>", "<c-x><c-o>", { noremap = true, silent = true })
