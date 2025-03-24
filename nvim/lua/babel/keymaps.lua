@@ -116,7 +116,8 @@ require('telescope').setup{
 }
 
 -- Bacon quickfind
-keymap("n", "<Leader>.", ":BaconLoad<CR>:w<CR>:BaconNext<CR>", opts)
+-- keymap("n", "<Leader>.", ":BaconLoad<CR>:w<CR>:BaconNext<CR>", opts)
+keymap("n", "<Leader>.", ":BaconLoad<CR>:BaconNext<CR>", opts)
 
 -- Trigger autocompletion on Ctrl-Space
 keymap("i", "<c-space>", "<c-x><c-o>", { noremap = true, silent = true })
