@@ -5,8 +5,6 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
-require'lspconfig'.clangd.setup{}
-
 -- Autoformat using LSP default provider
 vim.api.nvim_create_user_command('AutoformatEnable', function(opts) vim.g.babel_disable_autoformat = false end, {})
 vim.api.nvim_create_user_command('AutoformatDisable', function(opts) vim.g.babel_disable_autoformat = true end, {})
